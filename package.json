@@ -1,0 +1,7 @@
+{
+  "name": "ResponsiveMultiLevelMenu",
+  "version": "1.0.1",
+  "description": "A responsive multi-level menu",
+  "main": "js/jquery.dlmenu.js",
+  "license": "UNLICENSED"
+}
