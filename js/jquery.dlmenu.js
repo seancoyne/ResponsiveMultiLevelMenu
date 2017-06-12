@@ -37,7 +37,9 @@
 		// menu.
 		useActiveItemAsLink: false,
 		// On close reset the menu to root
-		resetOnClose: true
+		resetOnClose: true,
+		onOpen: function( menu ) {},
+		onClose: function( menu ) {}
 	};
 
 	$.DLMenu.prototype = {
@@ -221,6 +223,7 @@
 			}
 
 			this.open = false;
+			self.options.onClose( this.$menu );
 		},
 		openMenu : function() {
 			if( !this.open ) {
@@ -238,6 +241,7 @@
 			} );
 			this.$trigger.addClass( 'dl-active' );
 			this.open = true;
+			self.options.onOpen( this.$menu );
 		},
 		// resets the menu to its original state (first level of options)
 		_resetMenu : function() {
